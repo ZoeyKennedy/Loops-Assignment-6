@@ -66,7 +66,7 @@ namespace Loops_Assignment_6
 
                     while (!int.TryParse(Console.ReadLine(), out testScore))
                             Console.WriteLine("Input needs to be an integer, try again.");
-                    while (testScore != 500)
+                    while (testScore != 500) //valid input 0-100 and 500
                     {
                        
                         
