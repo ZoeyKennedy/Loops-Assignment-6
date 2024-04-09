@@ -11,6 +11,9 @@ namespace Loops_Assignment_6
             int between;
             string choice = "";
             int over70;
+            int under70;
+            over70 = 0;
+            under70 = 0;
             int testScore;
             while (choice != "q")
             {
@@ -52,7 +55,9 @@ namespace Loops_Assignment_6
                     Console.WriteLine("Enter an integer between " + min + " and " + max);
                     while (!int.TryParse(Console.ReadLine(), out between) || between > max || between < min)
                         Console.WriteLine("Input needs to be an integer between the numbers " + min + " and " + max + " , try again.");
-
+                    
+                        
+                    
                 }
                 else if (choice == "2")
                 {
@@ -66,14 +71,51 @@ namespace Loops_Assignment_6
 
                     while (!int.TryParse(Console.ReadLine(), out testScore))
                             Console.WriteLine("Input needs to be an integer, try again.");
-                    while (testScore != 500) //valid input 0-100 and 500
+
+
+                    bool done = false;
+                    while (testScore != 500 && testScore > 0 && testScore <= 100) //valid input 0-100 and 500
                     {
                        
-                        
+
+                        Console.WriteLine("Enter a test score");
+                        testScore = Convert.ToInt32(Console.ReadLine());
+                       
+
+                        if (testScore >= 70)
+                        {
+                            over70 = (over70 + 1);
+                        }
+                        else
+                        {
+                            under70 = (under70 + 1);    
+                        }
                     }
 
+                    
+                    while (!done)
+                    {
+                        Console.WriteLine("Please enter a valid test score. (0-100 or 500 to stop entering test scores)");
+                        testScore = Convert.ToInt32(Console.ReadLine());
+                        if (testScore == 500)
+                        {
+                            Console.WriteLine(over70 + " test scores were 70% or higher");
+                            Console.WriteLine(under70 + " test scores were under 70%");
+                            Console.WriteLine("Press ENTER to clear");
+                            Console.ReadLine();
+                            done = true;
+                        }
 
-
+                        else if (testScore >= 70)
+                        {
+                            over70 = (over70 + 1);
+                        }
+                        else
+                        {
+                            under70 = (under70 + 1);
+                        }
+                    }
+                   
 
                 }
                 // Add an else if for each valid choice...
