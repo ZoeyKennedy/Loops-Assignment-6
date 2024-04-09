@@ -22,6 +22,7 @@ namespace Loops_Assignment_6
                 Console.WriteLine();
                 Console.WriteLine("1 - Prompter ");
                 Console.WriteLine("2 - Percent Passing");
+                Console.WriteLine("3 - OddSum");
                 Console.WriteLine("...");
                 Console.WriteLine("x - Menu Option x");
                 Console.WriteLine("Q - Quit");
@@ -119,6 +120,48 @@ namespace Loops_Assignment_6
 
                 }
                 // Add an else if for each valid choice...
+                else if ( choice == "3")
+                {
+                    int number;
+
+                    Console.WriteLine("Enter a number between 1 and 50");
+                    number = Convert.ToInt32(Console.ReadLine());
+                    while (number > 50 || number < 1)
+                    {
+                        Console.WriteLine("Choose a number between 1 and 50.");
+                        number = Convert.ToInt32(Console.ReadLine());
+                    }
+                    if (number > 0 && number <= 50)
+                    {
+                      
+                    }
+                    // { number % 2 > 0 )   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                }
 
                 else
                 {
