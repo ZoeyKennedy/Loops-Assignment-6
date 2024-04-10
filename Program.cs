@@ -133,9 +133,15 @@ namespace Loops_Assignment_6
                     }
                     if (number > 0 && number <= 50)
                     {
-                      
+                      for (int i = 1; i <=  number; i += 2)
+                        {
+                            Console.WriteLine($"{i}");
+                        }
+                        Console.WriteLine("Press ENTER to finish");
+                        Console.ReadLine();
                     }
-                    // { number % 2 > 0 )   }
+                    
+                    
 
 
 
