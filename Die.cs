@@ -18,7 +18,7 @@ namespace _5._5_Lesson
             _roll = _generator.Next(1, 7);
         }
 
-        public Die(int roll)
+        public Die(int Roll)
         {
             _generator = new Random(roll);
             //ensures a valid roll
